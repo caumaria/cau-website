@@ -2,15 +2,20 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  --grey: #070d0cd2;
+  --main-background: #070D0C;
+  --dark-green: #14332F;
+  --light-green: #66FFED;
+  --pink: #FF336D;
+  --lettering: #8A9997;
 }
 
 html,
 body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--main-background);
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
 }
 

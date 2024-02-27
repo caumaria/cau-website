@@ -1,6 +1,9 @@
 {
-    "header": {
-        "title": "ENGLISH HEADER"
+    "navbar": {
+        "home": "Home",
+        "me": "About Me",
+        "work": "Work",
+        "contact": "Contact"
     },
     "home": {
         "title": "ENGLISH HOME"

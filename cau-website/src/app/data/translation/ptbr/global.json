@@ -1,6 +1,9 @@
 {
-    "header": {
-        "title": "CABEÇALHO PORTUGUÊS"
+    "navbar": {
+        "home": "Página Inicial",
+        "me": "Sobre Mim",
+        "work": "Portfolio",
+        "contact": "Contato"
     },
     "home": {
         "title": "PÁGINA INICIAL"
