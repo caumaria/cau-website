@@ -23,8 +23,6 @@ const NavbarContainer = styled.nav`
     a {
       text-decoration: none;
       color: white;
-    }
-    li {
       cursor: pointer;
       list-style: none;
       transition: transform 0.3s ease;

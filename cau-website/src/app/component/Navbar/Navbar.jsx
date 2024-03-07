@@ -14,21 +14,21 @@ export default function Navbar() {
   return (
     <NavbarContainer>
       <div>
-        <img src="logo.png" alt="Cau Ugolini" />
+        <img src="logo.png" alt="Cau Ugolini logo" />
       </div>
       <div>
         <ul>
-          <Link href="/">
-            <li data-content="Home">{t("navbar.home")}</li>
+          <Link href="/" data-content="Home">
+            {t("navbar.home")}
           </Link>
-          <Link href="/About">
-            <li data-content="About Me">{t("navbar.me")}</li>
+          <Link href="/About" data-content="About Me">
+           {t("navbar.me")}
           </Link>
-          <Link href="/Work">
-            <li data-content="Work">{t("navbar.work")}</li>
+          <Link href="/Work" data-content="Work">
+           {t("navbar.work")}
           </Link>
-          <Link href="/Contact">
-            <li data-content="Contact">{t("navbar.contact")}</li>
+          <Link href="/Contact" data-content="Contact">
+            {t("navbar.contact")}
           </Link>
         </ul>
       </div>
