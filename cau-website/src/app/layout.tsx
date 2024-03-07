@@ -26,10 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head title="Developer Cau website & blog" />
       <I18nextProvider i18n={i18next}>
-        <head title="Developer Cau website & blog" />
-        <Navbar />
-        <body>{children}</body>
+        <body>
+          <Navbar />
+          {children}
+        </body>
       </I18nextProvider>
     </html>
   );
