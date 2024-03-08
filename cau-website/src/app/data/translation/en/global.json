@@ -7,5 +7,9 @@
     },
     "home": {
         "title": "ENGLISH HOME"
+    },
+    "hero": {
+        "title": "Hi, I'm Cau!",
+        "about": "A software developer with a goal to create exceptional web experiences"
     }
 }

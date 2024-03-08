@@ -7,5 +7,9 @@
     },
     "home": {
         "title": "PÁGINA INICIAL"
+    },
+    "hero": {
+        "title": "Oi, eu sou a Cau!",
+        "about": "E sou desenvolvedora de software apaixonada por criar experiências web excepcionais."
     }
 }
