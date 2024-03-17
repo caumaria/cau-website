@@ -2,40 +2,42 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import NavbarContainer from "./NavbarStyle";
+import NavbarContainer, { MotionContainer } from "./NavbarStyle";
+import { staggerContainer, fadeIn } from "../../data/motion";
+import LanguageButton from "./LanguageButton";
 
 export default function Navbar() {
   const [t, i18n] = useTranslation("global");
 
-  const handleLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-
   return (
-    <NavbarContainer>
-      <div>
-        <img src="logo.png" alt="Cau Ugolini logo" />
-      </div>
-      <div>
-        <ul>
-          <Link href="/" data-content="Home">
-            {t("navbar.home")}
-          </Link>
-          <Link href="/About" data-content="About Me">
-           {t("navbar.me")}
-          </Link>
-          <Link href="/Work" data-content="Work">
-           {t("navbar.work")}
-          </Link>
-          <Link href="/Contact" data-content="Contact">
-            {t("navbar.contact")}
-          </Link>
-        </ul>
-      </div>
-      <div>
-        <button onClick={() => handleLanguage("en")}>EN</button>
-        <button onClick={() => handleLanguage("ptbr")}>PT</button>
-      </div>
-    </NavbarContainer>
+    <MotionContainer
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
+      <NavbarContainer
+      variants={fadeIn("down", "tween", 1.4, 1)}>
+        <h1>Cau</h1>
+
+        <div>
+          <ul>
+            <Link href="/" data-content={t("navbar.home")}>
+              {t("navbar.home")}
+            </Link>
+            <Link href="/About" data-content={t("navbar.me")}>
+              {t("navbar.me")}
+            </Link>
+            <Link href="/Work" data-content={t("navbar.work")}>
+              {t("navbar.work")}
+            </Link>
+            <Link href="/Contact" data-content={t("navbar.contact")}>
+              {t("navbar.contact")}
+            </Link>
+          </ul>
+        </div>
+          <LanguageButton />
+      </NavbarContainer>
+    </MotionContainer>
   );
 }

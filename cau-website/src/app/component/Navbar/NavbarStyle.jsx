@@ -1,25 +1,35 @@
 import styled from "styled-components";
-import React from "react";
+import { motion } from "framer-motion";
 
-const NavbarContainer = styled.nav`
+const NavbarContainer = styled(motion.nav)`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  padding: 1rem;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding: 2rem;
   gap: 2rem;
+  height: 100px;
 
-  div {
-    width: 36%;
-    img {
-      width: 100%;
+  @media (max-width: 668px) {
+    font-size: 0.8rem;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+      display: none;
     }
   }
 
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   ul {
     display: flex;
     gap: 2rem;
+    margin-right: 2rem;
     a {
       text-decoration: none;
       color: white;
@@ -42,5 +52,8 @@ const NavbarContainer = styled.nav`
     }
   }
 `;
+
+export const MotionContainer = styled(motion.header)`
+`
 
 export default NavbarContainer;
