@@ -29,7 +29,6 @@ const NavbarContainer = styled(motion.nav)`
   ul {
     display: flex;
     gap: 2rem;
-    margin-right: 2rem;
     a {
       text-decoration: none;
       color: white;
